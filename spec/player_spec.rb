@@ -1,11 +1,11 @@
 require 'player'
 
 describe Player do
-  let (:board) { double :board, :collect_hits => "A2"}
-  let (:player) { Player.new board }
+  let (:board) { double :board, :collect_hits => 'A2' }
+  let (:player) { described_class.new board }
 
-  context "player fires" do
-    it "should respond to fire and coordinates" do
+  context 'player fires' do
+    it 'should respond to fire and coordinates' do
       expect(player).to respond_to(:fire).with(1).argument
     end
 
@@ -14,9 +14,9 @@ describe Player do
       player.won?
     end
 
-    it "should let board expect check player fire hits" do
-      expect(board).to receive(:checks).with("A2")
-      player.fire("A2")
+    it 'should let board expect check player fire hits' do
+      expect(board).to receive(:checks).with('A2')
+      player.fire('A2')
     end
 
   end

@@ -1,4 +1,3 @@
-
 class Ship
 
   attr_reader :size
@@ -16,7 +15,6 @@ class Ship
   def get_hit
     @hits += 1
   end
-
 
   def self.boat
     Ship.new 2
@@ -37,6 +35,5 @@ class Ship
   def self.aircraft_carrier
     Ship.new 5
   end
-
 
 end
